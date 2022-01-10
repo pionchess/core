@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es2015",
+    "module": "CommonJS",
+    "lib": ["es2015"],
+    "declaration": true,
+    "sourceMap": true,
+    "baseUrl": "src",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "__tests__", "dist", "coverage"]
+}

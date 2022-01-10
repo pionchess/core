@@ -1,0 +1,36 @@
+{
+  "name": "@pionchess/core",
+  "version": "0.0.4",
+  "main": "index.js",
+  "repository": "https://github.com/pionchess/core.git",
+  "author": "Dodilanne <vincaudet@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "rm -rf ./dist && tsc && tsc-alias",
+    "prepub": "yarn build && cp package.json dist",
+    "pub": "cd dist && npm adduser && npm publish --access public",
+    "postpub": "rm dist/package.json",
+    "format": "prettier --write src __tests__",
+    "lint": "tsc --noEmit && eslint src/ __tests__",
+    "test": "NODE_PATH=./src jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.3.0",
+    "prettier-eslint": "^13.0.0",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "tsc-alias": "^1.5.0",
+    "typescript": "^4.5.4"
+  }
+}
